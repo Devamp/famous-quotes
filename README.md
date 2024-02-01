@@ -1,4 +1,7 @@
 # FamousQuotes - Share and Explore Famous Quotes
+<div align="center" style="max-width: 50%;">
+  <img src="https://github.com/Devamp/famous-quotes/blob/main/static/images/quill_image.jpg" alt="Project Logo" width='200' height='200'>
+</div>
 
 FamousQuotes is a dynamic fullstack web application that allows users to share and explore a diverse collection of famous quotes. Built with Flask, Python, and SQLite3, FamousQuotes provides a seamless platform for both contributors and enthusiasts of thought-provoking quotes.
 
