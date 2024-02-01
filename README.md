@@ -29,7 +29,7 @@ Make sure you have the following installed on your machine:
 
    ```bash
    git clone https://github.com/your-username/famous-quotes.git
-   cd QuoteHub
+   cd famous-quotes
    ```
 
 2. Create a virtual environment:
