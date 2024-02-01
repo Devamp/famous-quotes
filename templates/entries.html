@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set document character set and viewport for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
+    <title>Famous Quotes Gallery</title>
+    <!-- Link to the external stylesheet for styling -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <!-- Link to Google Fonts for a unique font style -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+    />
+  </head>
+  <body>
+    <!-- Heading of the webpage -->
+    <h1>Famous Quotes Gallery</h1>
+
+    <!-- Loop through the quotes and display each one -->
+    {% for quote in quotes %}
+    <div class="quote-div">
+      <!-- Display the quote with a specific class for styling -->
+      <p class="fancy-quote">"{{ quote[1] }}"</p>
+      <!-- Display the author in bold -->
+      <p style="font-weight: bold">- {{ quote[2] }}</p>
+      <!-- Display additional information such as date, source, and rating -->
+      <p style="left: 0">
+        Date: {{ quote[3] }} | Source: {{quote[5]}} ({{quote[4]}}) | Rating:
+        {{quote[6]}}
+      </p>
+    </div>
+    {% endfor %}
+
+    <!-- Button to navigate back to the home page -->
+    <div class="button-container-post">
+      <a href="{{ url_for('welcome_page') }}">
+        <button id="returnHomeButtonView" type="button">Back to Home</button>
+      </a>
+    </div>
+
+    <!-- Footer information with developer details -->
+    <div class="footer">Devam Patel | OdinID: devamp</div>
+  </body>
+</html>

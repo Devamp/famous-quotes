@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 100px;
+}
+h1 {
+  color: #3498db;
+}
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+p {
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fancy-quote {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Indie Flower", cursive;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  color: #555;
+  font-size: 14px;
+  left: 0;
+}
+
+.quoteAlert {
+  background-color: aquamarine;
+  width: fit-content;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+}
+
+#postButton,
+#exploreButton {
+  background-color: #3498db;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#postButton:hover,
+#exploreButton:hover {
+  background-color: #2575b2;
+}
+
+#submitQuoteButton,
+#returnHomeButton,
+#returnHomeButtonView {
+  background-color: black;
+  color: white;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+#submitQuoteButton:hover {
+  background-color: green;
+}
+
+#returnHomeButton:hover {
+  background-color: darkred;
+}
+
+#returnHomeButtonView:hover {
+  background-color: #2575b2;
+}
+
+div.button-container a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+div.button-container-post {
+  display: flex;
+  text-decoration: none;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  text-align: left;
+  background-color: #3498db;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: 400px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  margin-bottom: 10px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.quote-div {
+  margin: 20px;
+  border: 8px outset black;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set document character set and viewport for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
+    <title>Famous Quotes</title>
+    <!-- Link to the external stylesheet for styling -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Heading of the webpage -->
+    <h1>Welcome to Famous Quotes!</h1>
+    <!-- Description of the web app -->
+    <p style="max-width: 400px; text-align: center; margin: auto">
+      Welcome to Famous Quotes Web App! Explore, contribute, and be inspired by
+      timeless quotes. Submit your favorites and discover words of wisdom from
+      various sources. Start your journey of inspiration today!
+    </p>
+
+    <!-- Image for visual appeal -->
+    <img
+      src="static/images/quill_image.jpg"
+      alt="Welcome image with a quill"
+      width="200"
+      height="200"
+    />
+
+    <!-- Prompt for user direction -->
+    <p>How may we direct you?</p>
+
+    <!-- Buttons to navigate to different sections of the web app -->
+    <div class="button-container">
+      <!-- Button to view quotes -->
+      <a href="{{ url_for('entries_page') }}">
+        <button type="button" id="postButton">View Quotes</button>
+      </a>
+      <!-- Button to post a new quote -->
+      <a href="{{ url_for('post_page') }}">
+        <button type="button" id="exploreButton">Post a Quote</button>
+      </a>
+    </div>
+
+    <!-- Display a success message if a quote was successfully submitted -->
+    {% if success %}
+    <div class="quoteAlert">
+      <p>
+        Your quote was successfully submitted! Check it out by clicking 'View
+        Quotes'.
+      </p>
+    </div>
+    {% endif %}
+
+    <!-- Footer information with developer details -->
+    <div class="footer">Devam Patel | OdinID: devamp</div>
+  </body>
+</html>

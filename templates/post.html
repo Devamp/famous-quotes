@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set document character set and viewport for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
+    <title>Post a Quote</title>
+    <!-- Link to the external stylesheet for styling -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Heading of the webpage -->
+    <h1>MAKE YOUR CONTRIBUTION TODAY.</h1>
+    <!-- Description of the purpose of the form -->
+    <p style="max-width: 400px; text-align: center; margin: auto">
+      Use the form below to submit your favorite quote. Upon submission, your
+      quote and its supporting description will become available for everyone to
+      view.
+    </p>
+
+    <!-- Form for submitting a new quote -->
+    <div class="form-container">
+      <!-- Heading within the form -->
+      <h1 style="color: black; text-align: center">New Quote Form</h1>
+
+      <!-- Quote submission form -->
+      <form action="/process_post" method="post">
+        <!-- Input for the quote with character limit -->
+        <label for="quote">Quote (max 200 characters):</label>
+        <textarea
+          id="quote"
+          name="quote"
+          rows="4"
+          cols="40"
+          maxlength="200"
+          required
+        ></textarea>
+
+        <!-- Input for the author or person attributed to the quote -->
+        <label for="attributed_person">Author/Person Attributed to:</label>
+        <input
+          type="text"
+          id="attributed_person"
+          name="attributed_person"
+          required
+        />
+
+        <!-- Input for the date of the quote -->
+        <label for="date_of_quote">Date of the quote:</label>
+        <input type="date" id="date_of_quote" name="date_of_quote" required />
+
+        <!-- Dropdown for selecting the source type of the quote -->
+        <label for="source_type">Source type for the quote:</label>
+        <select id="source_type" name="source_type" required>
+          <option value="book">Book</option>
+          <option value="speech">Speech</option>
+          <option value="essay">Essay</option>
+          <option value="movie">Movie</option>
+          <option value="song">Song</option>
+          <option value="other">Other</option>
+        </select>
+
+        <!-- Input for providing the source of the quote -->
+        <label for="quote_source">Source of the quote:</label>
+        <input type="text" id="quote_source" name="quote_source" required />
+
+        <!-- Input for rating the quote on a scale of 1-5 -->
+        <label for="quote_rating">Quote rating (1-5):</label>
+        <input
+          type="number"
+          id="quote_rating"
+          name="quote_rating"
+          min="1"
+          max="5"
+          required
+        />
+
+        <!-- Buttons for navigation and submitting the form -->
+        <div class="button-container-post">
+          <a href="{{ url_for('welcome_page') }}">
+            <button id="returnHomeButton" type="button">
+              Back to Home
+            </button> </a
+          ><a href="{{ url_for('entries_page') }}">
+            <button id="submitQuoteButton" type="submit">Submit Quote</button>
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer information with developer details -->
+    <div class="footer">Devam Patel | OdinID: devamp</div>
+  </body>
+</html>
